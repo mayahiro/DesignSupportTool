@@ -36,11 +36,11 @@ class OverlayShowService : Service() {
                 PixelFormat.TRANSLUCENT
         )
 
-        wm!!.addView(view, params)
+        wm?.addView(view, params)
     }
 
     override fun onDestroy() {
-        wm!!.removeView(view)
+        wm?.removeView(view)
         super.onDestroy()
     }
 }
