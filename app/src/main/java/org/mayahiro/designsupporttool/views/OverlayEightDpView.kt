@@ -14,14 +14,14 @@ class OverlayEightDpView @JvmOverloads constructor(context: Context, attrs: Attr
     private val metrics: DisplayMetrics
     private val paint: Paint
     private val redPaint: Paint
-    private val base: Int
+    private val base: Float
 
     init {
         val wm = context.getSystemService(Context.WINDOW_SERVICE) as WindowManager
         metrics = DisplayMetrics()
         wm.defaultDisplay.getMetrics(metrics)
 
-        base = Math.round(8 * metrics.density)
+        base = 8 * metrics.density
 
         paint = Paint()
         paint.strokeWidth = 1f
@@ -42,7 +42,7 @@ class OverlayEightDpView @JvmOverloads constructor(context: Context, attrs: Attr
     override fun onDraw(canvas: Canvas) {
         var i = base
         while (i < metrics.widthPixels) {
-            if (i % (base * 5) == 0) {
+            if (i % (base * 5) == 0f) {
                 canvas.drawLine(i - 0.5f, 0f, i - 0.5f, metrics.heightPixels.toFloat(), redPaint)
             } else {
                 canvas.drawLine(i - 0.5f, 0f, i - 0.5f, metrics.heightPixels.toFloat(), paint)
