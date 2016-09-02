@@ -41,8 +41,12 @@ class MainActivity : AppCompatActivity() {
             stopService(service)
         }
 
-        // api version
+        // build information
+        os_version_text_view.text = Build.VERSION.RELEASE
         api_version_text_view.text = Build.VERSION.SDK_INT.toString()
+        brand_text_view.text = Build.BRAND
+        manufacturer_text_view.text = Build.MANUFACTURER
+        model_text_view.text = Build.MODEL
 
         // display metrics
         val displayMetrics = DisplayMetricsUtils.displayMetrics(this)
