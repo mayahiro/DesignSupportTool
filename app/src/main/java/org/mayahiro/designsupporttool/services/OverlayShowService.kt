@@ -14,9 +14,7 @@ class OverlayShowService : Service() {
     private var wm: WindowManager? = null
     private var view: View? = null
 
-    override fun onBind(intent: Intent?): IBinder? {
-        return null
-    }
+    override fun onBind(intent: Intent?): IBinder? = null
 
     override fun onCreate() {
         super.onCreate()

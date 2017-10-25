@@ -1,4 +1,4 @@
-package org.mayahiro.designsupporttool.views
+package org.mayahiro.designsupporttool.view
 
 import android.content.Context
 import android.content.res.Configuration
