@@ -1,4 +1,4 @@
-package org.mayahiro.designsupporttool
+package org.mayahiro.designsupporttool.activity
 
 import android.content.Intent
 import android.databinding.DataBindingUtil
@@ -7,11 +7,12 @@ import android.os.Build
 import android.os.Bundle
 import android.provider.Settings
 import android.support.v7.app.AppCompatActivity
+import org.mayahiro.designsupporttool.R
 import org.mayahiro.designsupporttool.databinding.ActivityMainBinding
 import org.mayahiro.designsupporttool.ext.density
 import org.mayahiro.designsupporttool.ext.displayHeight
 import org.mayahiro.designsupporttool.ext.displayWidth
-import org.mayahiro.designsupporttool.services.OverlayShowService
+import org.mayahiro.designsupporttool.service.OverlayShowService
 
 class MainActivity : AppCompatActivity() {
     companion object {
@@ -26,7 +27,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
-        setSupportActionBar(binding.includedToolbar.toolbar)
+        setSupportActionBar(binding.includedToolbar?.toolbar)
         val actionBar = supportActionBar
         actionBar?.setTitle(R.string.app_name)
 

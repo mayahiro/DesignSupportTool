@@ -11,7 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/DesignSupportTool">
 
-        <activity android:name=".MainActivity">
+        <activity android:name=".activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -20,7 +20,7 @@
         </activity>
 
         <service
-            android:name=".services.OverlayShowService"
+            android:name=".service.OverlayShowService"
             android:enabled="true" />
 
     </application>
