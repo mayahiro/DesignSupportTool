@@ -1,4 +1,4 @@
-package org.mayahiro.designsupporttool.service
+package xyz.mayahiro.designsupporttool.service
 
 import android.app.Service
 import android.content.Context
@@ -9,7 +9,7 @@ import android.os.IBinder
 import android.view.LayoutInflater
 import android.view.View
 import android.view.WindowManager
-import org.mayahiro.designsupporttool.R
+import xyz.mayahiro.designsupporttool.R
 
 class OverlayShowService : Service() {
     private var wm: WindowManager? = null

@@ -1,4 +1,4 @@
-package org.mayahiro.designsupporttool.ext
+package xyz.mayahiro.designsupporttool.ext
 
 import android.content.Context
 

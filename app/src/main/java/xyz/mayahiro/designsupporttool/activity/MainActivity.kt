@@ -1,22 +1,22 @@
-package org.mayahiro.designsupporttool.activity
+package xyz.mayahiro.designsupporttool.activity
 
 import android.content.Intent
-import android.databinding.DataBindingUtil
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.provider.Settings
-import android.support.v7.app.AppCompatActivity
-import org.mayahiro.designsupporttool.R
-import org.mayahiro.designsupporttool.databinding.ActivityMainBinding
-import org.mayahiro.designsupporttool.ext.density
-import org.mayahiro.designsupporttool.ext.displayHeight
-import org.mayahiro.designsupporttool.ext.displayWidth
-import org.mayahiro.designsupporttool.service.OverlayShowService
+import androidx.appcompat.app.AppCompatActivity
+import androidx.databinding.DataBindingUtil
+import xyz.mayahiro.designsupporttool.R
+import xyz.mayahiro.designsupporttool.databinding.ActivityMainBinding
+import xyz.mayahiro.designsupporttool.ext.density
+import xyz.mayahiro.designsupporttool.ext.displayHeight
+import xyz.mayahiro.designsupporttool.ext.displayWidth
+import xyz.mayahiro.designsupporttool.service.OverlayShowService
 
 class MainActivity : AppCompatActivity() {
     companion object {
-        val REQUEST_OVERLAY_PERMISSION = 10000
+        const val REQUEST_OVERLAY_PERMISSION = 10000
     }
 
     private lateinit var binding: ActivityMainBinding
@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
-        setSupportActionBar(binding.includedToolbar?.toolbar)
+        setSupportActionBar(binding.includedToolbar.toolbar)
         val actionBar = supportActionBar
         actionBar?.setTitle(R.string.app_name)
 
